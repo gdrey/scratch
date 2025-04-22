@@ -3,3 +3,4 @@ pandas
 requests
 protobuf
 gtfs-realtime-bindings
+streamlit-autorefresh
