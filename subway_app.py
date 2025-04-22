@@ -12,8 +12,8 @@ GTFS_RT_URL = "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtf
 st.set_page_config(page_title="NYC Subway Realtime", layout="wide")
 st.title("🚇 NYC Subway Realtime Map")
 
-# Auto-refresh every 15 seconds
-st.experimental_rerun(interval=15_000)  # 15 seconds
+from streamlit_autorefresh import st_autorefresh
+st_autorefresh(interval=15 * 1000, key="datarefresh")
 
 @st.cache_data(ttl=3600)
 def load_stops():
