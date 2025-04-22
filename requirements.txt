@@ -2,3 +2,4 @@ streamlit
 pandas
 requests
 protobuf
+gtfs-realtime-bindings
